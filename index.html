@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pass Academy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/jquery.fullPage.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery/jquery.easing.min.js"></script>
+    <script src="vendor/jquery/jquery.fullPage.js"></script>
+    <script src="vendor/jquery/scrolloverflow.min.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                //Navigation
+                menu: '#menu',
+                lockAnchors: false,
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                navigation: false,
+                navigationPosition: 'right',
+                navigationTooltips: ['01', '02', '03', '04'],
+                showActiveTooltip: true,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                easing: 'swing',
+                scrollOverflow: true,
+
+                afterLoad: function (anchorLink, index) { // you need to add the parameters
+                    // simply ask fullpage for section index:
+                    if (index === 1) {
+                        $('#menu').hide(); // or toggle by class
+                    }
+                    else {
+                        $('#menu').show(); // or toggle by class
+                    }
+
+                    if (index === 4) {
+                        $('.scroll-next-btn').hide();
+                        $('#menu a').addClass('color-dark-blue');
+                        $('#menu').addClass('dark');
+                    } else {
+                        $('.scroll-next-btn').attr('href', '#page' + (index + 1)).show();
+                        $('#menu a').removeClass('color-dark-blue');
+                        $('#menu').removeClass('dark');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body id="page-top">
+<ul id="menu" class="line-list list-unstyled text-right font-weight-bold">
+    <span class="line"></span>
+    <li data-menuanchor="page1" class=""><a href="#page1">01</a></li>
+    <li data-menuanchor="page2" class="active"><a href="#page2">02</a></li>
+    <li data-menuanchor="page3" class=""><a href="#page3">03</a></li>
+    <li data-menuanchor="page4" class=""><a href="#page4">04</a></li>
+    <li data-menuanchor="page5" class="disabled"><a href="#" class="disabled">05</a></li>
+</ul>
+<a class="scroll-next-btn" href="#page2" style="">
+    <span class="fa-layers fa-fw fa-2x">
+        <i class="far fa-circle"></i>
+        <i class="fa-inverse fas fa-chevron-down" data-fa-transform="shrink-8"></i>
+    </span>
+</a>
+<div class="mobile-menu">
+    <img class="img-fluid float-left" src="img/logotype.png">
+    <a href="#">
+        <img class="img-fluid float-right" src="img/menu_btn.png">
+    </a>
+</div>
+<div id="fullpage">
+    <div class="section bg-primary-own text-white">
+        <img class="img-fluid img-header" src="img/header.png" style="position: absolute; top: 0;">
+        <div class="container text-center">
+            <div class="img-fluid">
+                <a class="" href="#">
+                    <img class="img-logotype" src="img/logotype.png">
+                </a>
+            </div>
+            <div class="header-desktop-center">
+                <div class="header-text">
+                    <h1>Центр профессиональной <br> подготовки</h1>
+                </div>
+                <div class="img-fluid">
+                    <img class="img-partners" src="img/partners.png">
+                </div>
+            </div>
+            <div class="header-mobile-center">
+                <div class="header-text">
+                    <h5>Центр профессиональной <br> подготовки</h5>
+                </div>
+                <div class="img-fluid">
+                    <img class="img-mobile-partners" src="img/mobile_partners.png">
+                </div>
+            </div>
+        </div>
+        <img class="img-fluid img-header-mobile" src="img/header.png" style="position: absolute; bottom: 0;">
+    </div>
+
+    <div class="section bg-primary-own text-white">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 mx-auto" style="display: flex">
+                    <div class="section-two-desktop row">
+                        <div class="col-md-3 col-lg-3">
+                            <div class="img-fluid">
+                                <a class="" href="#">
+                                    <img class="img-logotype-small" src="img/logotype.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h2>Центр профессиональной <br> подготовки</h2>
+                        </div>
+                    </div>
+                    <div class="section-two-mobile col-sm-12" style="margin-top: 6rem">
+                        <div class="col-md-12 text-center">
+                            <h5>Центр профессиональной <br> подготовки</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 mx-auto" style="display: flex; margin-top: 7rem; margin-bottom: 7rem;">
+                    <div class="col-md-8 offset-md-2 col-sm-12">
+                        <p class="lead">
+                            This is a great place to talk about your webpage. This template is purposefully
+                            unstyled so you can use it as a boilerplate or starting point for you own landing page
+                            designs! This template features:
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section bg-primary-own text-white">
+        <div class="container text-center">
+            <div class="row section-three">
+                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto display-flex">
+                    <div class="section-two-desktop row">
+                        <div class="col-md-3 col-lg-3">
+                            <div class="img-fluid">
+                                <a class="" href="#">
+                                    <img class="img-logotype-small" src="img/logotype.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h2>Центр профессиональной <br> подготовки</h2>
+                        </div>
+                    </div>
+                    <div class="section-two-mobile col-sm-12" style="margin-top: 7rem">
+                        <div class="col-md-12 text-center">
+                            <h5>Центр профессиональной <br> подготовки</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto" style="display: flex;">
+                    <div class="col-md-8 offset-md-2 col-sm-12 text-left" style="margin-top: 3.5rem;">
+                        <h4>
+                            Наше предложение простое.
+                            Мы гарантируем успешный результат по
+                            следующим пунктам:
+                        </h4>
+                        <div class="row pd-top-25 display-flex">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="sections">
+                                    <h6>Экзамены для поступления в ВУЗ:</h6>
+                                    <ul class="list-unstyled">
+                                        <li>IELTS</li>
+                                        <li>TOEFL</li>
+                                        <li>HSK</li>
+                                        <li>GMAT</li>
+                                        <li>SAT</li>
+                                        <li>GRE</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href="#" class="btn btn-light">Подробней</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="sections">
+                                    <h6>Квалификационные экзамены:</h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            ACCA
+                                        </li>
+                                        <li>CFA</li>
+                                        <li>DipLFR</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href="acca.html" class="btn btn-light">Подробней</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="sections">
+                                    <h6>HR Coaching:</h6>
+                                    <ul class="list-unstyled">
+                                        <li>HR Coaching/Consulting</li>
+                                        <li>Написание CV</li>
+                                        <li>Motivation letters</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href="#" class="btn btn-light">Подробней</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section bg-light-own">
+        <!-- Footer -->
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 mx-auto" style="display: flex; margin-top: 25px;">
+                    <h1 class="font-weight-bold footer-header">КЛАСС</h1>
+                    <div class="col-md-11 footer"></div>
+                    <img class="" src="img/note.png" style="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
